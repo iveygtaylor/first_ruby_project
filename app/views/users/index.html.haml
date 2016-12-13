@@ -1,0 +1,11 @@
+%h1 All Users
+
+=link_to 'New User', new_user_path
+
+- @users.each do |user|
+  = link_to user_path(user) do
+    =user.fname + ' ' + user.lname
+  %br
+  = user.email
+  %br
+  %hr

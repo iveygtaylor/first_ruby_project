@@ -1,0 +1,17 @@
+%h1 Show User
+ID:
+= @user.id
+%br
+FirstName:
+= @user.fname
+%br
+LastName
+= @user.lname
+%br
+Email
+= @user.email
+%br
+Username
+= @user.username
+%br
+= link_to('Delete User?', user_path(@user.id), method: :delete)
