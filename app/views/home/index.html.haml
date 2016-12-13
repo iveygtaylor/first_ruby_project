@@ -1,2 +1,6 @@
 %h1 Welcome to my fun Twerky Experiment
 %h2 Time to get your twerk on!
+= form_tag("/search", method: "get") do
+   = label_tag(:query, "Search:")
+   = text_field_tag(:query)
+   = submit_tag("Submit")

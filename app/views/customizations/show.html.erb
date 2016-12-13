@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @customization.avatar %>
+</p>
+
+<p>
+  <strong>Connections:</strong>
+  <%= @customization.connections %>
+</p>
+
+<%= link_to 'Edit', edit_customization_path(@customization) %> |
+<%= link_to 'Back', customizations_path %>

@@ -1,0 +1,27 @@
+<%= form_for(customization) do |f| %>
+  <% if customization.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(customization.errors.count, "error") %> prohibited this customization from being saved:</h2>
+
+      <ul>
+      <% customization.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :avatar %>
+    <%= f.text_field :avatar %>
+  </div>
+
+  <div class="field">
+    <%= f.label :connections %>
+    <%= f.number_field :connections %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

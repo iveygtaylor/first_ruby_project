@@ -1,4 +1,4 @@
-!!!
+!!
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -11,6 +11,6 @@
     %a{href: '/users'} Twerky Users
     %a{href: '/tweets'} Twerky Tweets
     %br
-    = flash[:notice] if flash [:notice]
-    = flash[:alert] if flash [:alert]
+    = flash[:notice] if flash[:notice]
+    = flash[:alert] if flash[:alert]
     = yield
