@@ -1,4 +1,4 @@
-!!
+!!!
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
@@ -7,9 +7,29 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    %a{href: '/'}Home
-    %a{href: '/users'} Twerky Users
-    %a{href: '/tweets'} Twerky Tweets
+    %a{href: '/'}
+      Home
+    |
+    %a{href: '/users'}
+      Twerky Users
+    |
+    %a{href: '/tweets'}
+      Twerky Tweets
+    - if current_user
+      |
+      %a{href: '/logout'}
+        Logout
+    - else
+      |
+      %a{href: '/login'}
+        Login
+    %a{href:'/?lang=pi'} Pirate
+    %a{href:'/?lang=en'} English
+    %br
+    %br
+    - if current_user
+      %h2
+        ='Welcome ' + current_user.fname
     %br
     = flash[:notice] if flash[:notice]
     = flash[:alert] if flash[:alert]

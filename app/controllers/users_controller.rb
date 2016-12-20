@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
-  def index
+def index
+  if params[:query]
+    @users = User.where('lower(fname) LIKE ? OR lower(lname) LIKE ?', params[:query].downcase, params[:query].downcase)
+  else
     @users = User.all
   end
+end
 
   def show
-    @user = User.find (params[:id])
+    @user = User.find(params[:id])
   end
 
   def destroy
@@ -36,5 +40,4 @@ class UsersController < ApplicationController
       :username
     )
   end
-
 end

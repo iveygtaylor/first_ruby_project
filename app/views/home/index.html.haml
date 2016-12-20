@@ -1,5 +1,7 @@
-%h1 Welcome to my fun Twerky Experiment
-%h2 Time to get your twerk on!
+%h1= t('hello')
+
+%h1 Welcome Aboard the Best Place to Share Your Bountiful Booty of Knowledge
+
 = form_tag("/search", method: "get") do
    = label_tag(:query, "Search:")
    = text_field_tag(:query)
