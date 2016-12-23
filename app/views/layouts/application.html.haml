@@ -11,18 +11,22 @@
       Home
     |
     %a{href: '/users'}
-      Twerky Users
+      Buccaneers
     |
     %a{href: '/tweets'}
-      Twerky Tweets
+      Swashbucklin' Tales
     - if current_user
       |
       %a{href: '/logout'}
-        Logout
+        Disembark
     - else
       |
       %a{href: '/login'}
         Login
+      |
+      %a{href: '../users/new'}
+        Come Aboard!
+      |
     %a{href:'/?lang=pi'} Pirate
     %a{href:'/?lang=en'} English
     %br

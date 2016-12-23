@@ -1,6 +1,12 @@
 %h1 New User
 
-= form_for User.new do |f|
+- if @user.errors.full_messages.any?
+  %ul
+    - @user.errors.full_messages.each do |error_message|
+      %li= error_message
+      %br
+
+= form_for @user do |f|
   = f.label :fname, 'First Name:'
   = f.text_field :fname
   %br
